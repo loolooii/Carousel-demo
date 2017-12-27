@@ -1,7 +1,9 @@
+'use strict';
+
 /*
 * Carousel class
 * As generic as possible for the short amount of time. Could be more generic, for example:
-* setting src attribute of <img> tag instead of background-image CSS property, constructing the Carousel with less props 
+* setting src attribute of <img> tag instead of background-image CSS property, constructing the Carousel with less props
 *
 */
 function Carousel(imageFolder, titleElement, descriptionElement, images, imageElement, navBulletsElement) {
