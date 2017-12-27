@@ -1,6 +1,10 @@
 # Carousel-demo
 A basic carousel for demo purposes without using external libraries.
 
+## How to run:
+Clone this repository and run `node index.js` and go to `localhost:3000`.  
+Or just open `/public/index.html` in your browser and it should work.
+
 Possible improvements:
 * Animations could be added to the slide
 * Add automatic slider
