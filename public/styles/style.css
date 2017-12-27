@@ -1,0 +1,114 @@
+/* Importing custom font-family
+* different versions: mobile browsers, modern and not so modern browsers
+* IE versions older than IE9 not supported (.eot)
+*/
+@font-face {
+  font-family: 'UbuntuRegular';
+  src: url('../fonts/ubuntu-r-webfont.woff2') format('woff2'),
+       url('../fonts/ubuntu-r-webfont.woff') format('woff'),
+       url('../fonts/ubuntu-r-webfont.ttf')  format('truetype')
+}
+
+body {
+  margin: 0;
+  font-family: 'UbuntuRegular', sans-serif;
+}
+.container {
+  margin: 1em;
+}
+/* Mobile first CSS, so in this case we just want display block */
+.carousel {
+  border: 1px solid #d2e6ef;
+}
+/* To create grid of 2 columns */
+.image, .text {
+  flex: 1;
+}
+.text {
+  padding: 0.5em 1em 1em 1em;
+  background-color: white;
+}
+.text h2 {
+  color: #00a1de;
+}
+.text p {
+  color: #2f5364;
+}
+.image .next, .image .prev {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: lighter;
+}
+/* Vertically center the next/previous arrows */
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20em;
+}
+.image .next:hover, .image .prev:hover {
+  color: #CCC;
+}
+.image .next {
+  right: 1em;
+}
+.image .prev {
+  left: 1em;
+}
+.nav-dots {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  top: calc(20em + 20px);
+  color: #999;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 50px;
+}
+.nav-dots li {
+  display: inline;
+  cursor: pointer;
+  font-size: 20px;
+}
+.nav-dots li:not(:first-child) {
+  padding-left: 0.5em;
+}
+.nav-dots li:hover {
+  color: #00a1de;
+}
+.nav-dots li.active {
+  color: #00a1de;
+}
+
+/* I used mobile first CSS, so only change/extend if larger than mobile */
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 2em 3em 0.5em 3em;
+    background-color: #003145;
+    margin: 0;
+  }
+  /* Here we want flex to have 2 columns next to each other  */
+  .carousel {
+    display: flex;
+    border: none;
+    min-height: 20em;
+  }
+  .image {
+    height: auto;
+  }
+  .image .next {
+    right: calc(50% + 0.7em);
+  }
+  .image .prev {
+    left: 1.5em;
+  }
+  .nav-dots {
+    color: white;
+    margin: 0 0 0 20%;
+    position: relative;
+    top: 5px;
+  }
+}
